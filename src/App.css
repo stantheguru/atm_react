@@ -1,0 +1,59 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.outerView{
+  background-color: #dedede;
+  padding:3rem;
+  margin-top: 2rem;
+}
+
+.cardOuter{
+  background-color: #f1f1f1;
+  padding: 2rem;
+ 
+  
+}
+
+.separator{
+  width: 0.3rem;
+}
+
+.outerView{
+  background-color: #f9f9f9;
+  padding: 5rem;
+ 
+  
+}
+
+.email{
+  margin-top: 1rem;
+  width: 20rem;
+}
+
+.cardPin{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  background-color: #f2f2f2;
+}
+
+.pinHeader{
+  font-size: 32px;
+}
+
+.header{
+  font-size: 32px;
+  text-align: center;
+  color: red;
+}
+.buttons{
+  display: flex;
+  margin-top: 1rem;
+}
+
