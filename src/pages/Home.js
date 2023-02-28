@@ -2,11 +2,12 @@ import '../App.css';
 import logo from './assets/red.png'
 import card from './assets/atm.png'
 import { FaCreditCard, FaMoneyBill, FaArrowCircleRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 
 
 function Home() {
- 
+ const navigate = useNavigate()
 
   return (
       <>
@@ -15,16 +16,16 @@ function Home() {
           <div className='outerViewHome'>
 
 
-            <img alt='logo' className='logo' src={logo} />
+            <img alt='logoHome' className='logoHome' src={logo} />
 
             <div className='cardInnerHome'>
               <div className='cardHomeButtons'>
                 
-              <div class="shadow-lg p-4 mb-5 bg-white rounded action">
+              <div onClick={()=>navigate("/withdraw")} class="shadow-lg p-4 mb-5 bg-white rounded action">
             
               
                 Withdraw Cash  <FaCreditCard/></div>
-              <div class="shadow-lg p-4 mb-5 bg-white rounded action">Check Balance <FaMoneyBill/>
+              <div onClick={()=>navigate("/balance")}  class="shadow-lg p-4 mb-5 bg-white rounded action">Check Balance <FaMoneyBill/>
               </div>
               <div class="shadow-lg p-4 mb-5 bg-white rounded action">Transfer Funds <FaArrowCircleRight/></div>
               

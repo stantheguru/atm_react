@@ -195,6 +195,12 @@
  
 }
 
+.logoHome{
+  height: 4%;
+  width: 30%;
+}
+
+
 .cardHomeButtons{
   justify-content: center;
   display: flex;
@@ -231,9 +237,401 @@ text-align: center;
 }
 
 
-/*Smaller resolution */
-@media screen and (max-width: 400px) {
+/*Withdraw page  max*/
+
+.cardWithdrawLeft{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 4%;
+  
+
+}
+.logoWithdraw{
+  height: 4%;
+  width: 40%;
+}
+
+
+.cardInnerWithdraw{
+  display: flex;
+  margin-top: 2%;
+ height: auto;
  
+ justify-content: center;
+ 
+}
+
+.cardWithdrawRight{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 1%;
+ 
+  
+
+}
+
+
+.outerViewWithdraw{
+  background-color: #E9EFF2;
+  padding-left:8rem;
+  padding-right:8rem;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  margin-top: 0.4rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.action{
+  
+  font-family: var(--font-inter);
+  font-size: 18px;
+  cursor: pointer;
+text-align: center;
+margin-bottom: 1.2rem !important;
+  
+
+}
+
+.action:hover{
+  background: #143D73 !important;
+  color: white !important;
+}
+
+.otherAmount{
+  
+  display: flex;
+  padding: 0px !important;
+ height: 3.2rem !important;
+
+ 
+  
+
+}
+.other{
+  width: 80%;
+  border-width: 0;
+  margin-right: 1%;
+  border-radius: 20% !important;
+}
+
+.other:focus{
+  outline: none;
+  font-family: var(--font-inter);
+  font-size: 18px;
+}
+
+.buttonGo{
+  width: 30%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-family: var(--font-inter);
+}
+
+.otherTitle{
+  font-family: var(--font-inter);
+  font-weight: bolder;
+}
+.back{
+  margin-right: 3%;
+ background-color:#E9EFF2 !important;
+ border-color:#E9EFF2 !important;
+}
+
+.errorAmount{
+  color: #F0182D;
+  margin-top: -2rem;
+
+  text-align: center;
+}
+
+/*Take card max */
+.pleaseTitle{
+  margin-bottom: 8%;
+  font-family: var(--font-inter);
+  font-weight: bolder;
+  color: #143D73;
+}
+
+
+.outerTakeCard{
+  background-color: #E9EFF2;
+  padding:2rem;
+  margin-top: 2rem;
+  align-self: center;
+  width: 60%;
+  border-radius: 1rem;
+}
+
+.logoTakeCard{
+  height: 4%;
+  width: 30%;
+}
+.cardTakeCard{
+  display: flex;
+  margin-top: 10%;
+}
+
+.cardInnerTakeCard{
+  width: 100%;
+  align-items: center;
+  display: flex;
+
+}
+
+.cardOuterTakeCard{
+  width: 40%;
+  align-items: center;
+
+}
+
+.imageRightTakeCard{
+  width: 80%;
+  height: 90%;
+}
+
+.imageRightDivTakeCard{
+  width: 50%;
+}
+
+.pleaseTitle{
+  margin-bottom: 8%;
+  font-family: var(--font-inter);
+  font-weight: bolder;
+  color: #143D73;
+}
+
+/*Finish page */
+.outerFinish{
+  background-color: #E9EFF2;
+  padding:3rem;
+  margin-top: 2rem;
+  align-self: center;
+  width: 60%;
+  border-radius: 1rem;
+}
+.cardFinish{
+  display: flex;
+  margin-top: 10%;
+}
+
+.cardInnerFinish{
+  width: 100%;
+  align-items: center;
+  display: flex;
+
+}
+
+.cardOuterFinish{
+  width: 40%;
+  align-items: center;
+
+}
+
+.imageRightFinish{
+  width: 80%;
+  height: 90%;
+}
+
+.imageRightDivFinish{
+  width: 60%;
+  justify-content: center;
+ display: flex;
+}
+
+.logoFinish{
+  height: 4%;
+  width: 30%;
+}
+
+/*Thank You max*/
+.outerThankYou{
+  background-color: #E9EFF2;
+  padding:3rem;
+  margin-top: 2rem;
+  align-self: center;
+  width: 60%;
+  border-radius: 1rem;
+}
+.cardThankYou{
+  display: flex;
+  margin-top: 10%;
+}
+
+.cardInnerThankYou{
+  width: 100%;
+  align-items: center;
+  display: flex;
+
+}
+
+.cardOuterThankYou{
+  width: 40%;
+  align-items: center;
+
+}
+
+.imageRightThankYou{
+  width: 80%;
+  height: 90%;
+ 
+}
+
+.imageRightDivThankYou{
+  width: 60%;
+ justify-content: center;
+ display: flex;
+
+}
+
+.homeButton{
+
+  font-size: 18px;
+  padding-top: 0.6rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 0.6rem;
+  margin-right: 1%;
+  font-family: var(--font-inter);
+}
+
+.exitButton{
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-size: 18px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  margin-right: 1%;
+  font-family: var(--font-inter);
+}
+
+.thankTitle{
+  margin-bottom: 8%;
+  font-family: var(--font-inter);
+  font-weight: bolder;
+  color: #143D73;
+  font-size: 18px;
+}
+
+.logoThank{
+  height: 4%;
+  width: 30%;
+}
+
+
+/* Balance page max */
+
+.cardBalanceLeft{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 4%;
+  
+
+}
+.logoBalance{
+  height: 4%;
+  width: 30%;
+}
+
+
+.cardInnerBalance{
+  display: flex;
+  margin-top: 2%;
+ height: auto;
+ 
+ justify-content: center;
+ 
+}
+
+.cardBalanceRight{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 1%;
+ 
+
+}
+
+
+.outerViewBalance{
+  background-color: #E9EFF2;
+  padding-left:8rem;
+  padding-right:8rem;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  margin-top: 0.4rem;
+  border-radius: 1rem;
+  width: 60%;
+}
+
+.balItem{
+  
+  font-family: var(--font-inter);
+  font-size: 18px;
+  cursor: pointer;
+text-align: center;
+margin-bottom: 1.2rem !important;
+font-weight: bolder;
+color: #143D73;
+padding: 1rem !important;
+  
+
+}
+
+.balValue{
+  
+  font-family: var(--font-inter);
+  font-size: 18px;
+  cursor: pointer;
+text-align: center;
+margin-bottom: 1.2rem !important;
+background-color: #8FA4BF !important;
+color: white;
+padding: 1rem !important;
+font-weight: bolder;
+
+  
+
+}
+
+.balanceBack{
+ 
+ 
+  text-align: left;
+  width: 32%;
+  font-size: 18px;
+}
+
+.balanceExit{
+ 
+ 
+  text-align: right;
+  width: 32%;
+  font-size: 18px;
+}
+
+.printBal{
+  width: 100%;
+  padding: 0.6rem;
+  font-family: var(--font-inter);
+  font-size: 16px;
+
+}
+
+
+
+
+
+/*Smaller resolution */
+@media screen and (max-width: 600px) {
+ /*welcome screen 600*/
   .outerHome{
     background-color: #E9EFF2;
     padding:3rem;
@@ -257,10 +655,12 @@ text-align: center;
   
   .getstarted{
   
-    font-size: 11px;
+    font-size: 14px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-family: var(--font-inter);
+    align-self: center;
+    width: 100%;
   }
   
   .logo{
@@ -272,6 +672,7 @@ text-align: center;
    
   }
 
+ 
   .headerWelcome{
     font-size: 18px;
     text-align: left;
@@ -296,8 +697,806 @@ text-align: center;
     font-weight: normal;
   }
 
+  /*Login screen*/
+  .cardInnerLogin{
+   width: 100%;
+    margin-top: 1%;
+    justify-content: center;
+   
+  }
+  
+  
+
+
+  .outerView{
+    background-color: #E9EFF2;
+    padding:0.5rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+   
+  }
+
+ 
+
+  .cardPin{
+    align-items: center;
+    justify-content: center;
+   align-self: center;
+    flex-direction: column;
+    padding: 4rem;
+   
+  }
+  
+  .pinHeader{
+    font-size: 32px;
+    font-family: var(--font-inter);
+  }
+  .imageRightDivLogin{
+    display: none;
+  }
+
+  /*Home page*/
+  .outerViewHome{
+    background-color: #E9EFF2;
+    padding:1rem;
+    margin-top: 0.4rem;
+    border-radius: 1rem;
+    width: 90%;
+  }
+
+  .logoHome{
+    height: 5%;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+   
+  }
+
+  .imageRightDivHome{
+   display: none;
+   
+  }
+
+  .cardHomeButtons{
+    justify-content: center;
+    display: flex;
+    
+    width: 90%;
+    padding-right: 2%;
+ 
+  
+  }
+
+  .cardInnerHome{
+    display: flex;
+    margin-top: 2%;
+   height: 50%;
+   justify-content: center;
+  }
+
+  /*Withdraw */
+  
+.cardWithdrawLeft{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 4%;
+  
+
+}
+.logoWithdraw{
+  height: 4%;
+  width: 40%;
+}
+
+
+.cardInnerWithdraw{
+  display: flex;
+  margin-top: 2%;
+ height: auto;
+ 
+ justify-content: center;
+ 
+}
+
+.cardWithdrawRight{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 1%;
+ 
+  
+
+}
+
+
+.outerViewWithdraw{
+  background-color: #E9EFF2;
+  padding-left:3rem;
+  padding-right:3rem;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  margin: 0.4rem;
+  border-radius: 1rem;
+  width: 95%;
+}
+
+/* Take card */
+
+.outerTakeCard{
+  padding:3rem;
+    margin-top: 2rem;
+    align-self: center;
+    width: 80%;
+    
+    border-radius: 1rem;
+}
+
+
+.cardOuterTakeCard{
+  width: 100%;
+  align-items: center;
+  margin-top: 5%;
+ 
+
+}
+
+
+.imageRightDivTakeCard{
+  display: none;
+}
+
+
+.logoTakeCard{
+  height: 5%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 4%;
+  margin-bottom: 5%;
+ 
+
+
+}
+
+/*Finish page */
+.outerFinish{
+  padding:3rem;
+    margin-top: 2rem;
+    align-self: center;
+    width: 80%;
+    
+    border-radius: 1rem;
+}
+
+
+.cardOuterFinish{
+  width: 100%;
+  align-items: center;
+
+}
+
+.imageRightDivFinish{
+
+ display: none;
+}
+
+.logoFinish{
+  height: 5%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 4%;
+  margin-bottom: 5%;
+}
+
+/*Thank you page 600 */
+.outerThankYou{
+  padding:3rem;
+    margin-top: 2rem;
+    align-self: center;
+    width: 80%;
+    
+    border-radius: 1rem;
+}
+.cardInnerThankYou{
+display: flex;
+justify-content: center;
+}
+
+.cardOuterThankYou{
+  width: 100%;
+  align-items: center;
+
+}
+
+.imageRightDivThankYou{
+
+ display: none;
+
+}
+
+.homeButton{
+
+  font-size: 12px;
+  padding-top: 0.6rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 0.6rem;
+  margin-right: 1%;
+  font-family: var(--font-inter);
+}
+
+.exitButton{
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-size: 12px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  margin-right: 1%;
+  font-family: var(--font-inter);
+}
+
+.thankTitle{
+  margin-bottom: 8%;
+  font-family: var(--font-inter);
+  font-weight: bolder;
+  color: #143D73;
+  font-size: 18px;
+}
+
+.logoThank{
+  height: 5%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 4%;
+  margin-bottom: 5%;
+}
+
+  /*Balance page 600 */
+  
+.cardBalanceLeft{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 4%;
+  
+
+}
+.logoBalance{
+  height: 4%;
+  width: 50%;
+}
+
+
+.cardInnerBalance{
+  display: flex;
+  margin-top: 2%;
+ height: auto;
+ justify-content: center;
+ 
+}
+
+.cardBalanceRight{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 1%;
+ 
+
+}
+
+
+.outerViewBalance{
+  background-color: #E9EFF2;
+  padding-left:1rem;
+  padding-right:1rem;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  margin-top: 0.4rem;
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.balItem{
+  
+  font-family: var(--font-inter);
+  font-size: 12px;
+  cursor: pointer;
+text-align: center;
+margin-bottom: 1.2rem !important;
+font-weight: bolder;
+color: #143D73;
+padding: 1rem !important;
+  
+
+}
+
+.balValue{
+  
+  font-family: var(--font-inter);
+  font-size: 12px;
+  cursor: pointer;
+text-align: center;
+margin-bottom: 1.2rem !important;
+background-color: #8FA4BF !important;
+color: white;
+padding: 1rem !important;
+font-weight: bolder;
+
+  
+
+}
+
+.balanceBack{
+ 
+ 
+  text-align: left;
+  width: 20%;
+  font-size: 18px;
+}
+
+.balanceExit{
+ 
+ 
+  text-align: right;
+  width: 24%;
+  font-size: 18px;
+}
+
+.printBal{
+  width: 100%;
+  padding: 0.6rem;
+  font-family: var(--font-inter);
+  font-size: 16px;
+
+}
+
+
   
 }
+
+
+/*Smaller resolution */
+@media screen and (max-width: 400px) {
+  /*welcome screen */
+   .outerHome{
+     background-color: #E9EFF2;
+     padding:3rem;
+     margin-top: 2rem;
+     align-self: center;
+     width: 80%;
+     
+     border-radius: 1rem;
+   }
+ 
+   .imageRightDiv{
+    display: none;
+   }
+ 
+   .cardLogo{
+     width: 100%;
+     align-items: center;
+     display: flex;
+     margin-top: 20%;
+   }
+   
+   .getstarted{
+   
+     font-size: 14px;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+     font-family: var(--font-inter);
+     align-self: center;
+     width: 100%;
+   }
+   
+   .logo{
+     height: 5%;
+     width: 60%;
+     margin-left: 20%;
+     margin-right: 20%;
+     margin-top: 20%;
+    
+   }
+ 
+  
+   .headerWelcome{
+     font-size: 18px;
+     text-align: left;
+     color: #143D73;
+     font-weight: bolder;
+     font-family: var(--font-inter);
+   }
+   
+   .headerName{
+     font-size: 18px;
+     text-align: left;
+     color: #F0182D;
+     font-family: var(--font-inter);
+     
+   }
+   
+   .spanTo{
+     font-size: 18px;
+     text-align: left;
+     color: #F0182D;
+     font-family: var(--font-inter);
+     font-weight: normal;
+   }
+ 
+   /*Login screen*/
+   .cardInnerLogin{
+    width: 100%;
+     margin-top: 1%;
+     justify-content: center;
+    
+   }
+   
+   
+ 
+ 
+   .outerView{
+     background-color: #E9EFF2;
+     padding:0.5rem;
+     margin-top: 2rem;
+     border-radius: 1rem;
+     width: 90%;
+    
+   }
+ 
+  
+ 
+   .cardPin{
+     align-items: center;
+     justify-content: center;
+    align-self: center;
+     flex-direction: column;
+     padding: 4rem;
+    
+   }
+   
+   .pinHeader{
+     font-size: 32px;
+     font-family: var(--font-inter);
+   }
+   .imageRightDivLogin{
+     display: none;
+   }
+ 
+   /*Home page*/
+   .outerViewHome{
+     background-color: #E9EFF2;
+     padding:1rem;
+     margin-top: 0.4rem;
+     border-radius: 1rem;
+     width: 90%;
+   }
+ 
+   .logoHome{
+     height: 5%;
+     width: 60%;
+     margin-left: 20%;
+     margin-right: 20%;
+     margin-top: 10%;
+     margin-bottom: 10%;
+    
+   }
+ 
+   .imageRightDivHome{
+    display: none;
+    
+   }
+ 
+   .cardHomeButtons{
+     justify-content: center;
+     display: flex;
+     
+     width: 90%;
+     padding-right: 2%;
+  
+   
+   }
+ 
+   .cardInnerHome{
+     display: flex;
+     margin-top: 2%;
+    height: 50%;
+    justify-content: center;
+   }
+ 
+   /*Withdraw */
+   
+ .cardWithdrawLeft{
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   padding-right: 4%;
+   
+ 
+ }
+ .logoWithdraw{
+   height: 4%;
+   width: 40%;
+ }
+ 
+ 
+ .cardInnerWithdraw{
+   display: flex;
+   margin-top: 2%;
+  height: auto;
+  
+  justify-content: center;
+  
+ }
+ 
+ .cardWithdrawRight{
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   padding-right: 1%;
+  
+   
+ 
+ }
+ 
+ 
+ .outerViewWithdraw{
+   background-color: #E9EFF2;
+   padding-left:3rem;
+   padding-right:3rem;
+   padding-top:2rem;
+   padding-bottom:2rem;
+   margin: 0.4rem;
+   border-radius: 1rem;
+   width: 95%;
+ }
+ 
+ /* Take card */
+ 
+ .outerTakeCard{
+   padding:3rem;
+     margin-top: 2rem;
+     align-self: center;
+     width: 80%;
+     
+     border-radius: 1rem;
+ }
+ 
+ 
+ .cardOuterTakeCard{
+   width: 100%;
+   align-items: center;
+   margin-top: 5%;
+  
+ 
+ }
+ 
+ 
+ .imageRightDivTakeCard{
+   display: none;
+ }
+ 
+ 
+ .logoTakeCard{
+   height: 5%;
+   width: 60%;
+   margin-left: 20%;
+   margin-right: 20%;
+   margin-top: 4%;
+   margin-bottom: 5%;
+  
+ 
+ 
+ }
+ 
+ /*Finish page */
+ .outerFinish{
+   padding:3rem;
+     margin-top: 2rem;
+     align-self: center;
+     width: 80%;
+     
+     border-radius: 1rem;
+ }
+ 
+ 
+ .cardOuterFinish{
+   width: 100%;
+   align-items: center;
+ 
+ }
+ 
+ .imageRightDivFinish{
+ 
+  display: none;
+ }
+ 
+ .logoFinish{
+   height: 5%;
+   width: 60%;
+   margin-left: 20%;
+   margin-right: 20%;
+   margin-top: 4%;
+   margin-bottom: 5%;
+ }
+ 
+ /*Thank you page */
+ .outerThankYou{
+   padding:3rem;
+     margin-top: 2rem;
+     align-self: center;
+     width: 80%;
+     
+     border-radius: 1rem;
+ }
+ 
+ 
+ .cardOuterThankYou{
+   width: 100%;
+   align-items: center;
+ 
+ }
+ 
+ .imageRightDivThankYou{
+ 
+  display: none;
+ 
+ }
+ 
+ .homeButton{
+ 
+   font-size: 12px;
+   padding-top: 0.6rem;
+   padding-right: 2rem;
+   padding-left: 2rem;
+   padding-bottom: 0.6rem;
+   margin-right: 1%;
+   font-family: var(--font-inter);
+ }
+ 
+ .exitButton{
+   padding-right: 2rem;
+   padding-left: 2rem;
+   font-size: 12px;
+   padding-top: 0.6rem;
+   padding-bottom: 0.6rem;
+   margin-right: 1%;
+   font-family: var(--font-inter);
+ }
+ 
+ .thankTitle{
+   margin-bottom: 8%;
+   font-family: var(--font-inter);
+   font-weight: bolder;
+   color: #143D73;
+   font-size: 18px;
+ }
+ 
+ .logoThank{
+   height: 5%;
+   width: 60%;
+   margin-left: 20%;
+   margin-right: 20%;
+   margin-top: 4%;
+   margin-bottom: 5%;
+ }
+ 
+   /*Balance page 400 */
+    
+.cardBalanceLeft{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 4%;
+  
+
+}
+.logoBalance{
+  height: 4%;
+  width: 50%;
+}
+
+
+.cardInnerBalance{
+  display: flex;
+  margin-top: 2%;
+ height: auto;
+ justify-content: center;
+ 
+}
+
+.cardBalanceRight{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 1%;
+ 
+
+}
+
+
+.outerViewBalance{
+  background-color: #E9EFF2;
+  padding-left:1rem;
+  padding-right:1rem;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  margin-top: 0.4rem;
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.balItem{
+  
+  font-family: var(--font-inter);
+  font-size: 12px;
+  cursor: pointer;
+text-align: center;
+margin-bottom: 1.2rem !important;
+font-weight: bolder;
+color: #143D73;
+padding: 1rem !important;
+  
+
+}
+
+.balValue{
+  
+  font-family: var(--font-inter);
+  font-size: 12px;
+  cursor: pointer;
+text-align: center;
+margin-bottom: 1.2rem !important;
+background-color: #8FA4BF !important;
+color: white;
+padding: 1.55rem !important;
+font-weight: bolder;
+
+  
+
+}
+
+.balanceBack{
+ 
+ 
+  text-align: left;
+  width: 20%;
+  font-size: 18px;
+}
+
+.balanceExit{
+ 
+ 
+  text-align: right;
+  width: 24%;
+  font-size: 18px;
+}
+
+.printBal{
+  width: 100%;
+  padding: 0.6rem;
+  font-family: var(--font-inter);
+  font-size: 16px;
+
+}
+ 
+   
+ }
+ 
+ 
 
 
 

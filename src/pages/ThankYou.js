@@ -1,0 +1,53 @@
+import '../App.css';
+
+import thank from './assets/thankyou.png'
+import logo from './assets/red.png'
+import { useNavigate } from 'react-router-dom';
+import { FaArrowCircleRight, FaHome, FaWindowClose} from 'react-icons/fa';
+
+
+
+function ThankYou() {
+  const navigate = useNavigate()
+
+  const exit = () => {
+    navigate("/")
+  };
+
+  const home = () => {
+    navigate("/home")
+  };
+
+  return (
+    <>
+      
+
+        <div className='outerThankYou'>
+
+        <img alt='logo' className='logoThank' src={logo} />
+
+
+          <div className='cardThankYou'>
+            <div className='cardOuterThankYou'>
+            <h6 className='thankTitle'>Thank you for Banking with us</h6>
+            <div className='cardInnerThankYou'>
+              <button onClick={home} className='homeButton btn btn-success'>HOME <FaHome/></button>
+              <button onClick={exit} className='exitButton btn btn-danger'>EXIT <FaWindowClose/></button>
+            </div>
+            </div>
+           
+
+            <div className='imageRightDivThankYou'>
+              <img alt='thankyou' className='imageRightThankYou' src={thank} />
+            </div>
+
+
+          </div>
+         
+        </div>
+      
+    </>
+  );
+}
+
+export default ThankYou;

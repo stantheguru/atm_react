@@ -56,8 +56,7 @@ function Login() {
 
   return (
       <>
-        <div className='app'>
-
+       
           <div className='outerView'>
 
 
@@ -92,7 +91,7 @@ function Login() {
             </div>
            
 
-          </div>
+        
         </div>
 
       </>
