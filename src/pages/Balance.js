@@ -30,6 +30,30 @@ function Balance() {
 
  }
 
+ function print(){
+    var divToPrint=document.getElementById('receipt');
+
+
+	var newWin=window.open('','Print-Window');
+  
+	newWin.document.open();
+  
+  
+	newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+	divToPrint.style.display = "none"
+	
+	newWin.document.close();
+	
+	setTimeout(function(){newWin.close();
+		window.location.replace("/thank_you")
+		
+
+	},0);
+
+	
+ 
+ }
+
   return (
       <>
        
@@ -65,8 +89,97 @@ function Balance() {
            
               
           </div>
-          <button  className='printBal btn btn-success'>Print Receipt <FaPrint/></button>
+          <button onClick={print} className='printBal btn btn-success'>Print Receipt <FaPrint/></button>
         </div>
+
+        
+
+
+
+        
+<div hidden id="receipt">
+    <center><h3>RED PHEONIX BANK</h3></center>
+    <center>P.O. Box 100 - 00100 Nairobi</center>
+    <center>Tel: 0700627742</center>
+
+    <center>
+    <hr className='hr'></hr>
+        <h4>BALANCE RECEIPT</h4>
+       
+        <hr className="hr"></hr>
+    </center>
+
+    <div>
+        <center>
+            <table width="100%">
+               
+            </table>
+        </center>
+
+        <center>
+            <center>
+            <hr className="hr"></hr>
+            </center>
+           
+            <table width="80%">
+                <thead>
+                    <tr>
+                        <th></th>
+                      
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td className='receiptItem'  data-title="Item">Account Name</td>
+                        
+                        <td id="net_total" className='receiptItem'>Joe Dispensa</td>
+                    </tr>
+                    <tr>
+                        <td className='receiptItem'>Account Name</td>
+                        
+                        <td id="vat" className='receiptItem'>1235969696</td>
+                    </tr>
+
+                    <tr className='receiptItem'>
+                        <td className='receiptItem'>Available Balance</td>
+                        
+                        <td className='receiptItem'>5078.00</td>
+                    </tr>
+
+                    
+                    
+
+                    <tr>
+                        <td className='receiptItem'>Actual Balance</td>
+                        
+                        <td id="cash" className='receiptItem'>5078.00</td>
+                    </tr>
+
+                    
+
+                </tbody>
+               
+               
+            </table>
+            <center>
+            <hr className="hr"></hr>
+            </center>
+
+           
+            <div className='topStars'>
+<h4>THANK YOU FOR BANKING WITH US</h4>
+            </div>
+        </center>
+           
+          
+    </div>
+
+    
+
+
+    </div>
 
       </>
     );

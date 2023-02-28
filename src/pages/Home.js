@@ -27,7 +27,7 @@ function Home() {
                 Withdraw Cash  <FaCreditCard/></div>
               <div onClick={()=>navigate("/balance")}  class="shadow-lg p-4 mb-5 bg-white rounded action">Check Balance <FaMoneyBill/>
               </div>
-              <div class="shadow-lg p-4 mb-5 bg-white rounded action">Transfer Funds <FaArrowCircleRight/></div>
+              <div onClick={()=>navigate("/transfer")} class="shadow-lg p-4 mb-5 bg-white rounded action">Transfer Funds <FaArrowCircleRight/></div>
               
               </div>
               

@@ -9,6 +9,7 @@ import TakeCard from './TakeCard';
 import ThankYou from './ThankYou';
 import Finish from './Finish';
 import Balance from './Balance';
+import Transfer from './Transfer';
 
 
 const Main = () => {
@@ -24,6 +25,7 @@ const Main = () => {
           <Route exact path="/thank_you" element={<ThankYou />} />
           <Route exact path="/finish" element={<Finish />} />
           <Route exact path="/balance" element={<Balance />} />
+          <Route exact path="/transfer" element={<Transfer />} />
 
           
         </Route>
