@@ -2,13 +2,15 @@ import '../App.css';
 import logo from './assets/red.png'
 import card from './assets/atm.png'
 import { FaCreditCard, FaMoneyBill, FaArrowCircleRight } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, route } from 'react-router-dom';
 
 
 
 function Home() {
  const navigate = useNavigate()
 
+
+ 
   return (
       <>
         <div className='app'>

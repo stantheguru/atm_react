@@ -5,7 +5,9 @@ import logo from './assets/red.png'
 import pin from './assets/atm.png'
 import { useNavigate } from 'react-router-dom';
 import { FaWindowClose, FaUnlockAlt } from 'react-icons/fa';
+import * as base from "../env";
 
+var url = base.BASE_URL
 
 
 function Login() {
@@ -44,7 +46,27 @@ function Login() {
         var formData = new FormData()
         formData.append("Email", email)
         formData.append("PIN", pinCode)
+        
+
+        const response = await fetch(url+"/login", {
+          method: 'POST',
+          body: formData,
+          
+      });
+
+      const json = await response.json();
+    
+      if (json.exists == "YES") {
+        sessionStorage.removeItem("session")
+        var session = '{"Email":"' + email + '", "AccountName":"' + json.AccountName + '",  "MobileNumber":"' + json.MobileNumber + '"}'
+
+        
+        sessionStorage.setItem("session", session)
+     
         navigate("/home")
+      }else{
+        setError("Incorrect login credentials!!")
+      }
         
       }
       }catch (e) {

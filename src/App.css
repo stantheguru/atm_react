@@ -28,7 +28,7 @@
   border-radius: 1rem;
   width: 60%;
 }
-/* Welcome page */
+/* Welcome page max*/
 .outerHome{
   background-color: #E9EFF2;
   padding:3rem;
@@ -129,7 +129,7 @@
 }
 
 
-/*Login page */
+/*Login page max*/
 .cardInnerLogin{
   display: flex;
   margin-top: 2%;
@@ -178,7 +178,7 @@
   margin-top: 1rem;
 }
 
-/*Home page */
+/*Home page max*/
 .cardInnerHome{
   display: flex;
   margin-top: 2%;
@@ -629,6 +629,103 @@ font-weight: bolder;
   font-weight: bold;
 }
 
+/*Register page max*/
+ 
+.outerViewRegister{
+  background-color: #E9EFF2;
+  padding:3rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  width: 60%;
+}
+
+.logoRegister{
+  height: 4%;
+  width: 30%;
+  margin-bottom: 5%;
+}
+
+
+.registerHeader{
+  font-size: 24px;
+  font-family: var(--font-inter);
+  font-weight: bolder;
+}
+
+.cardInnerRegister{
+  display: flex;
+  
+  justify-content: center;
+  align-content: center;
+}
+
+.cardRegisterLeft{
+  
+
+width: 50%;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.cardRegisterRight{
+ 
+  width: 50%;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+
+
+
+.clearRegister{
+  padding:2rem;
+  padding-left: 2rem;
+  font-size: 18px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 50%;
+  margin-right: 2%;
+  font-family: var(--font-inter);
+}
+
+.enterRegister{
+  padding:2rem;
+  padding-left: 2rem;
+  font-size: 18px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 50%;
+  margin-left: 2%;
+  font-family: var(--font-inter);
+}
+
+
+.registerField{
+  margin-top: 1rem;
+  width: 100%;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #4865b8;
+  font-family: var(--font-inter);
+}
+
+.errorRegister{
+  color: #F0182D;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonsRegister{
+  display: flex;
+  margin-top: 1rem;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: center;
+}
+
+
 
 
 
@@ -1063,12 +1160,106 @@ font-weight: bolder;
 
 }
 
+/*Register page 400*/
+ 
+.outerViewRegister{
+  background-color: #E9EFF2;
+  padding:1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+}
 
+.logoRegister{
+  height: 4%;
+  width: 30%;
+  margin-bottom: 5%;
+}
+
+
+.registerHeader{
+  font-size: 24px;
+  font-family: var(--font-inter);
+  font-weight: bolder;
+}
+
+.cardInnerRegister{
+ flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.cardRegisterLeft{
+  width: 100%;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: -2rem;
+ 
+}
+
+.cardRegisterRight{
+  width: 100%;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: -30px;
+}
+
+
+
+
+.clearRegister{
+  padding:2rem;
+  padding-left: 2rem;
+  font-size: 18px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 50%;
+  margin-right: 2%;
+  font-family: var(--font-inter);
+}
+
+.enterRegister{
+  padding:2rem;
+  padding-left: 2rem;
+  font-size: 18px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 50%;
+  margin-left: 2%;
+  font-family: var(--font-inter);
+}
+
+
+.registerField{
+  margin-top: 1rem;
+  width: 100%;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #4865b8;
+  font-family: var(--font-inter);
+}
+
+.errorRegister{
+  color: #F0182D;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonsRegister{
+  display: flex;
+  margin-top: 1rem;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: center;
+}
   
 }
 
 
-/*Smaller resolution */
+/*400 Smaller resolution */
 @media screen and (max-width: 400px) {
   /*welcome screen */
    .outerHome{
@@ -1494,6 +1685,102 @@ font-weight: bolder;
   font-family: var(--font-inter);
   font-size: 16px;
 
+}
+
+/*Register page 400 */
+
+.outerViewRegister{
+  background-color: #E9EFF2;
+  padding:1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+}
+
+.logoRegister{
+  height: 4%;
+  width: 30%;
+  margin-bottom: 5%;
+}
+
+
+.registerHeader{
+  font-size: 24px;
+  font-family: var(--font-inter);
+  font-weight: bolder;
+}
+
+.cardInnerRegister{
+ flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.cardRegisterLeft{
+  width: 100%;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: -2rem;
+ 
+}
+
+.cardRegisterRight{
+  width: 100%;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: -30px;
+}
+
+
+
+
+.clearRegister{
+  padding:2rem;
+  padding-left: 2rem;
+  font-size: 15px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 50%;
+  margin-right: 2%;
+  font-family: var(--font-inter);
+}
+
+.enterRegister{
+  padding:2rem;
+  padding-left: 2rem;
+  font-size: 15px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 50%;
+  margin-left: 2%;
+  font-family: var(--font-inter);
+}
+
+
+.registerField{
+  margin-top: 1rem;
+  width: 100%;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #4865b8;
+  font-family: var(--font-inter);
+}
+
+.errorRegister{
+  color: #F0182D;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonsRegister{
+  display: flex;
+  margin-top: 1rem;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: center;
 }
  
    

@@ -10,6 +10,7 @@ import ThankYou from './ThankYou';
 import Finish from './Finish';
 import Balance from './Balance';
 import Transfer from './Transfer';
+import Register from './Register';
 
 
 const Main = () => {
@@ -26,6 +27,7 @@ const Main = () => {
           <Route exact path="/finish" element={<Finish />} />
           <Route exact path="/balance" element={<Balance />} />
           <Route exact path="/transfer" element={<Transfer />} />
+          <Route exact path="/register" element={<Register />} />
 
           
         </Route>

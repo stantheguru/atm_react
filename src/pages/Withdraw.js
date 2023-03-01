@@ -12,9 +12,21 @@ function Withdraw() {
  const [other_amount, setAmount] = useState("")
  const [error, setError] = useState("")
 
+ 
+
  function go(amount){
-  
-    navigate("/take_card")
+  withdraw()
+    //navigate("/take_card")
+ }
+
+ function withdraw(){
+  try{
+    var session = sessionStorage.getItem("session")
+    var jsession = JSON.parse(session)
+   
+  }catch(e){
+    alert(e)
+  }
  }
 
  function submitOther(){
@@ -25,7 +37,9 @@ function Withdraw() {
   }else if(other_amount>40000){
     setError("Amount cannot exceed 40,000")
   }else{
-    navigate("/take_card")
+    setError("")
+    withdraw()
+    //navigate("/take_card")
   }
 
  }
