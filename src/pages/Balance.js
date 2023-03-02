@@ -1,34 +1,51 @@
 import '../App.css';
 import logo from './assets/red.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {FaArrowCircleLeft, FaArrowCircleRight, FaPrint, FaWindowClose } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import * as base from '../env'
 
+
+var url = base.BASE_URL
 
 
 
 function Balance() {
  const navigate = useNavigate()
- const [other_amount, setAmount] = useState("")
- const [error, setError] = useState("")
+ const [data, setData] = useState({})
 
- function go(amount){
-  
-    navigate("/take_card")
+ async function fetchData(){
+  var session = sessionStorage.getItem("session")
+    var jsession = JSON.parse(session)
+  var formData = new FormData()
+        formData.append("Email", jsession.Email)
+   
+
+        const response = await fetch(url+"/balance", {
+          method: 'POST',
+          body: formData,
+          
+      });
+
+      const json = await response.json();
+      setData(json)
+     
+
  }
 
- function submitOther(){
-  if(other_amount==""){
-    setError("Please enter amount");
-  }else if(other_amount<500){
-    setError("Amount should be at least KES500")
-  }else if(other_amount>40000){
-    setError("Amount cannot exceed 40,000")
-  }else{
-    navigate("/take_card")
+ function checkLogin(){
+ 
+  if(sessionStorage.getItem("session")==null){
+    navigate("/")
   }
-
  }
+
+
+ 
+ useEffect(()=>{
+  checkLogin()
+  fetchData()
+ },[])
 
  function print(){
     var divToPrint=document.getElementById('receipt');
@@ -76,10 +93,10 @@ function Balance() {
               
 
               <div className='cardBalanceRight'>
-              <div  className="shadow-lg p-4 mb-5 bg-white rounded balValue">JOE DISPENSA</div>
-              <div  className="shadow-lg p-4 mb-5 bg-white rounded balValue">0373839399</div>
-              <div  className="shadow-lg p-4 mb-5 bg-white rounded balValue">30,000.00</div>
-              <div  className="shadow-lg p-4 mb-5 bg-white rounded balValue">30,000.00</div>
+              <div  className="shadow-lg p-4 mb-5 bg-white rounded balValue">{data.AccountName}</div>
+              <div  className="shadow-lg p-4 mb-5 bg-white rounded balValue">{data.AccountNumber}</div>
+              <div  className="shadow-lg p-4 mb-5 bg-white rounded balValue">{data.AvailableBalance}</div>
+              <div  className="shadow-lg p-4 mb-5 bg-white rounded balValue">{data.ActualBalance}</div>
               
              
               
@@ -134,18 +151,18 @@ function Balance() {
                     <tr>
                         <td className='receiptItem'  data-title="Item">Account Name</td>
                         
-                        <td id="net_total" className='receiptItem'>Joe Dispensa</td>
+                        <td id="net_total" className='receiptItem'>{data.AccountName}</td>
                     </tr>
                     <tr>
                         <td className='receiptItem'>Account Name</td>
                         
-                        <td id="vat" className='receiptItem'>1235969696</td>
+                        <td id="vat" className='receiptItem'>{data.AccountNumber}</td>
                     </tr>
 
                     <tr className='receiptItem'>
                         <td className='receiptItem'>Available Balance</td>
                         
-                        <td className='receiptItem'>5078.00</td>
+                        <td className='receiptItem'>{data.AvailableBalance}</td>
                     </tr>
 
                     
@@ -154,7 +171,7 @@ function Balance() {
                     <tr>
                         <td className='receiptItem'>Actual Balance</td>
                         
-                        <td id="cash" className='receiptItem'>5078.00</td>
+                        <td id="cash" className='receiptItem'>{data.ActualBalance}</td>
                     </tr>
 
                     

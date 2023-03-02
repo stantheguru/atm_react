@@ -3,11 +3,23 @@ import logo from './assets/red.png'
 import card from './assets/atm.png'
 import { FaCreditCard, FaMoneyBill, FaArrowCircleRight } from 'react-icons/fa';
 import { useNavigate, route } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
 function Home() {
  const navigate = useNavigate()
+
+ function checkLogin(){
+ 
+  if(sessionStorage.getItem("session")==null){
+    navigate("/")
+  }
+ }
+
+ useEffect(()=>{
+checkLogin()
+ }, [])
 
 
  

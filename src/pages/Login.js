@@ -16,6 +16,8 @@ function Login() {
   const [error, setError] = useState("")
   const navigate = useNavigate()
 
+
+
   function clear() {
     //clear fields
     setValues(['', '', '', ''])
@@ -58,7 +60,7 @@ function Login() {
     
       if (json.exists == "YES") {
         sessionStorage.removeItem("session")
-        var session = '{"Email":"' + email + '", "AccountName":"' + json.AccountName + '",  "MobileNumber":"' + json.MobileNumber + '"}'
+        var session = '{"Email":"' + email + '","Limit":"' + json.Limit + '", "AccountName":"' + json.AccountName + '",  "MobileNumber":"' + json.MobileNumber + '", "CustomerID":"' + json.CustomerID + '"}'
 
         
         sessionStorage.setItem("session", session)

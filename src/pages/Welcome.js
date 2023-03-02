@@ -4,11 +4,23 @@ import atm from './assets/atm.jpg'
 import logo from './assets/red.png'
 import { useNavigate } from 'react-router-dom';
 import { FaArrowCircleRight} from 'react-icons/fa';
+import { useEffect } from 'react';
 
 
 
 function Welcome() {
   const navigate = useNavigate()
+
+  function checkLogin(){
+ 
+    if(sessionStorage.getItem("session")==null){
+      navigate("/")
+    }
+   }
+  
+   useEffect(()=>{
+  checkLogin()
+   }, [])
 
   const getStarted = () => {
     navigate("login")
@@ -24,7 +36,7 @@ function Welcome() {
           <h4 className="headerName">Red Phoenix Bank</h4>
 
 
-
+          <h5 className='pleaseTitle'>Please take your card...</h5>
           <div className='cardHome'>
 
             <div className='cardLogo'>
