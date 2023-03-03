@@ -1,4 +1,4 @@
-# Welcome to Atm App 
+# Welcome to ATM App 
 
 This project was created with `react js`
 The app uses `APIS` powered by `ASP.NET Web API` available on https://github.com/stantheguru/atm_csharp
