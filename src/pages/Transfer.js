@@ -1,5 +1,5 @@
 import '../App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from './assets/red.png'
 import pin from './assets/cards.png'
 import { useNavigate } from 'react-router-dom';
@@ -23,10 +23,10 @@ function Transfer() {
       navigate("/")
     }
    }
-  
-   
+  /* eslint-disable */
+   useEffect(()=>{
   checkLogin()
-   
+   }, [])
 
   function clear() {
     //clear fields

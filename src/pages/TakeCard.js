@@ -4,6 +4,7 @@ import atm from './assets/atm.png'
 import logo from './assets/red.png'
 import { useNavigate } from 'react-router-dom';
 import { FaArrowCircleRight} from 'react-icons/fa';
+import { useEffect } from 'react';
 
 
 
@@ -16,10 +17,10 @@ function TakeCard() {
       navigate("/")
     }
    }
-  
-  
+  /* eslint-disable */
+   useEffect(()=>{
   checkLogin()
-  
+   }, [])
 
   const getStarted = () => {
     navigate("/finish")

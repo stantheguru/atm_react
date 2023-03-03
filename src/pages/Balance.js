@@ -1,6 +1,6 @@
 import '../App.css';
 import logo from './assets/red.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {FaArrowCircleLeft, FaPrint, FaWindowClose } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import * as base from '../env'
@@ -41,11 +41,11 @@ function Balance() {
  }
 
 
- 
-
+ /* eslint-disable */
+ useEffect(()=>{
   checkLogin()
   fetchData()
-
+ },[])
 
  function print(){
     var divToPrint=document.getElementById('receipt');

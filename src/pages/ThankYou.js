@@ -3,7 +3,8 @@ import '../App.css';
 import thank from './assets/thankyou.png'
 import logo from './assets/red.png'
 import { useNavigate } from 'react-router-dom';
-import { FaHome, FaWindowClose } from 'react-icons/fa';
+import {  FaHome, FaWindowClose } from 'react-icons/fa';
+import { useEffect } from 'react';
 
 
 
@@ -16,9 +17,10 @@ function ThankYou() {
       navigate("/")
     }
   }
-
+/* eslint-disable */
+  useEffect(() => {
     checkLogin()
-  
+  }, [])
 
   const exit = () => {
     sessionStorage.removeItem("session")

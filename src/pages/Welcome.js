@@ -4,12 +4,13 @@ import atm from './assets/atm.jpg'
 import logo from './assets/red.png'
 import { useNavigate } from 'react-router-dom';
 import { FaArrowCircleRight} from 'react-icons/fa';
+import { useEffect } from 'react';
 
 
 
 function Welcome() {
   const navigate = useNavigate()
-
+/* eslint-disable */
   function checkLogin(){
  
     if(sessionStorage.getItem("session")===null){
@@ -18,9 +19,10 @@ function Welcome() {
       navigate("/home")
     }
    }
- 
+  
+   useEffect(()=>{
   checkLogin()
-   
+   },[])
 
   const getStarted = () => {
     navigate("login")

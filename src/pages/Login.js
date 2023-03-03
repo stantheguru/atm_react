@@ -1,6 +1,6 @@
 import '../App.css';
 import { PinInput } from 'react-input-pin-code' // ES Module
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from './assets/red.png'
 import pin from './assets/atm.png'
 import { useNavigate } from 'react-router-dom';
@@ -22,10 +22,10 @@ function Login() {
       navigate("/home")
     }
    }
-  
- 
+  /* eslint-disable */
+   useEffect(()=>{
   checkLogin()
-
+   },[])
   
 /* eslint-disable */
   function clear() {
