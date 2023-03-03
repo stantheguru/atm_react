@@ -17,6 +17,7 @@ function ThankYou() {
       navigate("/")
     }
   }
+  
 /* eslint-disable */
   useEffect(() => {
     checkLogin()
