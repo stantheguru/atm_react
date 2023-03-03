@@ -25,7 +25,7 @@ function Welcome() {
    },[])
 
   const getStarted = () => {
-    navigate("login")
+    navigate("/login")
   };
 
   return (
