@@ -5,7 +5,7 @@ import logo from './assets/red.png'
 import { useNavigate } from 'react-router-dom';
 import { FaArrowCircleRight} from 'react-icons/fa';
 import * as base from '../env'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 var url = base.BASE_URL
 
@@ -52,10 +52,10 @@ setTitle("Please take your cash...")
     setData(json)
     //await new Promise(resolve => setTimeout(resolve, 1000));
 }
-  useEffect(()=>{
+
     checkLogin()
 fetchData()
-  })
+  
   
 
   function print(){

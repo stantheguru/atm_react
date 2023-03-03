@@ -3,7 +3,6 @@ import logo from './assets/red.png'
 import card from './assets/atm.png'
 import { FaCreditCard, FaMoneyBill, FaArrowCircleRight, FaPlusCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 
 
@@ -18,9 +17,9 @@ function Home() {
   }
  }
 
- useEffect(()=>{
+
 checkLogin()
- })
+ 
 
 
  

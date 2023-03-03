@@ -1,5 +1,5 @@
 import '../App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import logo from './assets/red.png'
 import pin from './assets/cards.png'
 import { useNavigate } from 'react-router-dom';
@@ -24,9 +24,9 @@ function Transfer() {
     }
    }
   
-   useEffect(()=>{
+   
   checkLogin()
-   })
+   
 
   function clear() {
     //clear fields

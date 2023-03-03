@@ -1,6 +1,6 @@
 import '../App.css';
 import logo from './assets/red.png'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import * as base from '../env'
@@ -23,10 +23,9 @@ function Withdraw() {
         navigate("/")
       }
      }
-    
-     useEffect(()=>{
+ 
     checkLogin()
-     })
+    
 
  function go(amount){
   withdraw(amount)
