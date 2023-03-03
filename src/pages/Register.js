@@ -1,11 +1,7 @@
 import '../App.css';
-import { PinInput } from 'react-input-pin-code' // ES Module
 import { useState } from 'react';
 import logo from './assets/red.png'
-import pin from './assets/cards.png'
-import { useNavigate } from 'react-router-dom';
-import { FaWindowClose, FaUnlockAlt, FaArrowCircleRight } from 'react-icons/fa';
-import { act } from 'react-dom/test-utils';
+import { FaWindowClose, FaArrowCircleRight } from 'react-icons/fa';
 import * as base from "../env";
 
 
@@ -29,8 +25,8 @@ function Register() {
     const [available_balance, setAvailable] = useState("")
 
     const [error, setError] = useState("")
-    const navigate = useNavigate()
-
+    
+    /* eslint-disable */
     function clear() {
         //clear fields
         setAccount('')
@@ -54,7 +50,7 @@ function Register() {
             //validate pin
             if (email === "") {
                 setError("Please enter email")
-            } else if (reg.test(email) == false) {
+            } else if (reg.test(email) === false) {
                 setError("The email is invalid")
                 return false;
             } else if (account === "") {
@@ -67,13 +63,13 @@ function Register() {
                 setError("ID Number must be at least 5 digits")
             }else if (KRAPIN === "") {
                 setError("Please enter KRA PIN")
-            } else if (kraReg.test(KRAPIN)==false) {
+            } else if (kraReg.test(KRAPIN)===false) {
                 setError("KRA PIN is invalid")
             }else if (PIN === "") {
                 setError("Please enter Authentication PIN")
             } else if (PIN.length <4 || PIN.length>4) {
                 setError("Authentication PIN must be 4 digits")
-            } else if(mobile==""){
+            } else if(mobile===""){
                 setError("Please enter mobile number")
             }else if(mobile.length<9){
                 setError("Mobile number is invalid!")

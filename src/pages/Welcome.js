@@ -13,14 +13,14 @@ function Welcome() {
 
   function checkLogin(){
  
-    if(sessionStorage.getItem("session")==null){
+    if(sessionStorage.getItem("session")===null){
       navigate("/")
     }
    }
   
    useEffect(()=>{
   checkLogin()
-   }, [])
+   })
 
   const getStarted = () => {
     navigate("login")
@@ -36,19 +36,25 @@ function Welcome() {
           <h4 className="headerName">Red Phoenix Bank</h4>
 
 
-          <h5 className='pleaseTitle'>Please take your card...</h5>
-          <div className='cardHome'>
-
-            <div className='cardLogo'>
-              <button onClick={getStarted} className='getstarted btn btn-success'>GET STARTED <FaArrowCircleRight/></button>
+          <div className='cardTakeCard'>
+            <div className='cardOuterTakeCard'>
+            <h5 className='pleaseTitle'>Please insert your card...</h5>
+            <div className='cardInnerTakeCard'>
+              <button onClick={getStarted} className='getstarted btn btn-success'>CONTINUE <FaArrowCircleRight/></button>
+            
             </div>
+            </div>
+           
 
-            <div className='imageRightDiv'>
-              <img alt='atm' className='imageRight' src={atm} />
+            <div className='imageRightDivTakeCard'>
+              <img alt='atm' className='imageRightTakeCard' src={atm} />
+              
             </div>
 
 
           </div>
+
+
           <img alt='logo' className='logo' src={logo} />
         </div>
       

@@ -1,10 +1,9 @@
 import '../App.css';
-import { PinInput } from 'react-input-pin-code' // ES Module
 import { useState, useEffect } from 'react';
 import logo from './assets/red.png'
 import pin from './assets/cards.png'
 import { useNavigate } from 'react-router-dom';
-import { FaWindowClose, FaUnlockAlt, FaArrowCircleRight } from 'react-icons/fa';
+import { FaWindowClose, FaArrowCircleRight } from 'react-icons/fa';
 import * as base from '../env'
 
 
@@ -20,14 +19,14 @@ function Transfer() {
 
   function checkLogin(){
  
-    if(sessionStorage.getItem("session")==null){
+    if(sessionStorage.getItem("session")===null){
       navigate("/")
     }
    }
   
    useEffect(()=>{
   checkLogin()
-   }, [])
+   })
 
   function clear() {
     //clear fields
@@ -73,14 +72,14 @@ function Transfer() {
         const json = await response.json();
         var success = json.success
         var raccount = json.account
-        if(success =="Request success"){
+        if(success ==="Request success"){
           sessionStorage.removeItem("transaction")
           var transaction = '{"Type":"transfer","Amount":"' + amount + '", "AccountName":"' + raccount + '", "AccountNumber":"' + account + '"}'
           sessionStorage.setItem("transaction", transaction)
           navigate("/take_card")
-        }else if (success == "No enough funds"){
+        }else if (success === "No enough funds"){
           setError("You do not have enough funds")
-        }else if (success == "Request failed"){
+        }else if (success === "Request failed"){
           setError("The transaction failed! Try again")
         }else{
           setError("An error occurred")

@@ -19,14 +19,14 @@ function Withdraw() {
 
     function checkLogin(){
  
-      if(sessionStorage.getItem("session")==null){
+      if(sessionStorage.getItem("session")===null){
         navigate("/")
       }
      }
     
      useEffect(()=>{
     checkLogin()
-     }, [])
+     })
 
  function go(amount){
   withdraw(amount)
@@ -50,14 +50,14 @@ function Withdraw() {
 
       const json = await response.json();
       var success = json.success
-      if(success =="Request success"){
+      if(success ==="Request success"){
         sessionStorage.removeItem("transaction")
         var transaction = '{"Type":"withdraw","Amount":"' + amount + '"}'
         sessionStorage.setItem("transaction", transaction)
         navigate("/take_card")
-      }else if (success == "No enough funds"){
+      }else if (success === "No enough funds"){
         setError("You do not have enough funds")
-      }else if (success == "Request failed"){
+      }else if (success === "Request failed"){
         setError("The transaction failed! Try again")
       }else{
         setError("An error occurred")
@@ -71,7 +71,7 @@ function Withdraw() {
 
  function submitOther(){
   
-  if(other_amount==""){
+  if(other_amount===""){
     setError("Please enter amount");
   }else if(other_amount<500){
     setError("Amount should be at least KES500")

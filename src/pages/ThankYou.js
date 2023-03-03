@@ -3,7 +3,7 @@ import '../App.css';
 import thank from './assets/thankyou.png'
 import logo from './assets/red.png'
 import { useNavigate } from 'react-router-dom';
-import { FaArrowCircleRight, FaHome, FaWindowClose } from 'react-icons/fa';
+import { FaHome, FaWindowClose } from 'react-icons/fa';
 import { useEffect } from 'react';
 
 
@@ -13,14 +13,14 @@ function ThankYou() {
 
   function checkLogin() {
 
-    if (sessionStorage.getItem("session") == null) {
+    if (sessionStorage.getItem("session") === null) {
       navigate("/")
     }
   }
 
   useEffect(() => {
     checkLogin()
-  }, [])
+  })
 
   const exit = () => {
     sessionStorage.removeItem("session")

@@ -1,8 +1,8 @@
 import '../App.css';
 import logo from './assets/red.png'
 import card from './assets/atm.png'
-import { FaCreditCard, FaMoneyBill, FaArrowCircleRight } from 'react-icons/fa';
-import { useNavigate, route } from 'react-router-dom';
+import { FaCreditCard, FaMoneyBill, FaArrowCircleRight, FaPlusCircle } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 
@@ -10,16 +10,17 @@ import { useEffect } from 'react';
 function Home() {
  const navigate = useNavigate()
 
+ //check is there is a session
  function checkLogin(){
  
-  if(sessionStorage.getItem("session")==null){
+  if(sessionStorage.getItem("session")===null){
     navigate("/")
   }
  }
 
  useEffect(()=>{
 checkLogin()
- }, [])
+ })
 
 
  
@@ -42,7 +43,8 @@ checkLogin()
               <div onClick={()=>navigate("/balance")}  class="shadow-lg p-4 mb-5 bg-white rounded action">Check Balance <FaMoneyBill/>
               </div>
               <div onClick={()=>navigate("/transfer")} class="shadow-lg p-4 mb-5 bg-white rounded action">Transfer Funds <FaArrowCircleRight/></div>
-              
+              <div onClick={()=>navigate("/register")} class="shadow-lg p-4 mb-5 bg-white rounded action">Add Customer <FaPlusCircle/></div>
+
               </div>
               
 

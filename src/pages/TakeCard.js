@@ -13,14 +13,14 @@ function TakeCard() {
 
   function checkLogin(){
  
-    if(sessionStorage.getItem("session")==null){
+    if(sessionStorage.getItem("session")===null){
       navigate("/")
     }
    }
   
    useEffect(()=>{
   checkLogin()
-   }, [])
+   })
 
   const getStarted = () => {
     navigate("/finish")

@@ -21,7 +21,7 @@ function Finish() {
 
   function checkLogin(){
  
-    if(sessionStorage.getItem("session")==null){
+    if(sessionStorage.getItem("session")===null){
       navigate("/")
     }
    }
@@ -31,7 +31,7 @@ function Finish() {
 const fetchData=async()=>{
   var session = sessionStorage.getItem("session")
   var jsession = JSON.parse(session)
-  if(jtransaction.Type=="transfer"){
+  if(jtransaction.Type==="transfer"){
     setTitle("Press FINISH to finish transaction...")
   }else{
 setTitle("Please take your cash...")
@@ -55,14 +55,15 @@ setTitle("Please take your cash...")
   useEffect(()=>{
     checkLogin()
 fetchData()
-  },[])
+  })
   
 
   function print(){
-    if(jtransaction.Type=="withdraw"){
-    var divToPrint=document.getElementById('receipt');
+    if(jtransaction.Type==="withdraw"){
+        var divToPrint = ""
+    divToPrint=document.getElementById('receipt');
     }else{
-      var divToPrint=document.getElementById('receiptTransfer');
+      divToPrint=document.getElementById('receiptTransfer');
     }
 
 

@@ -1,7 +1,7 @@
 import '../App.css';
 import logo from './assets/red.png'
 import { useEffect, useState } from 'react';
-import {FaArrowCircleLeft, FaArrowCircleRight, FaPrint, FaWindowClose } from 'react-icons/fa';
+import {FaArrowCircleLeft, FaPrint, FaWindowClose } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import * as base from '../env'
 
@@ -35,7 +35,7 @@ function Balance() {
 
  function checkLogin(){
  
-  if(sessionStorage.getItem("session")==null){
+  if(sessionStorage.getItem("session")===null){
     navigate("/")
   }
  }
@@ -45,7 +45,7 @@ function Balance() {
  useEffect(()=>{
   checkLogin()
   fetchData()
- },[])
+ })
 
  function print(){
     var divToPrint=document.getElementById('receipt');

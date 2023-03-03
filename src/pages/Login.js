@@ -1,6 +1,6 @@
 import '../App.css';
 import { PinInput } from 'react-input-pin-code' // ES Module
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from './assets/red.png'
 import pin from './assets/atm.png'
 import { useNavigate } from 'react-router-dom';
@@ -16,8 +16,18 @@ function Login() {
   const [error, setError] = useState("")
   const navigate = useNavigate()
 
-
-
+  function checkLogin(){
+ 
+    if(sessionStorage.getItem("session")!=null){
+      navigate("/home")
+    }
+   }
+  
+   useEffect(()=>{
+  checkLogin()
+   })
+  
+/* eslint-disable */
   function clear() {
     //clear fields
     setValues(['', '', '', ''])
@@ -38,7 +48,7 @@ function Login() {
       //validate email
       else if (email === "") {
         setError("Please enter email")
-      } else if (reg.test(email) == false) {
+      } else if (reg.test(email) === false) {
         setError("The email is invalid")
         return false;
       } else  {
@@ -58,7 +68,7 @@ function Login() {
 
       const json = await response.json();
     
-      if (json.exists == "YES") {
+      if (json.exists === "YES") {
         sessionStorage.removeItem("session")
         var session = '{"Email":"' + email + '","Limit":"' + json.Limit + '", "AccountName":"' + json.AccountName + '",  "MobileNumber":"' + json.MobileNumber + '", "CustomerID":"' + json.CustomerID + '"}'
 
@@ -72,7 +82,9 @@ function Login() {
         
       }
       }catch (e) {
-
+if(e.toString().startsWith("TypeError")){
+  setError("Network Error!!")
+}
       }
 
     }
@@ -105,7 +117,9 @@ function Login() {
                   <div className='separator'></div>
                   <button onClick={login} className='enter btn btn-success'>ENTER <FaUnlockAlt/></button>
                 </div>
+               
                 <h6 className='error'>{error}</h6>
+                <a href='/register'>Add Customer</a>
               </div>
               
 
