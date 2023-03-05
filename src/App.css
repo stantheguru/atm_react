@@ -725,7 +725,55 @@ width: 50%;
   justify-content: center;
 }
 
+.textfield {
+  width: 100%;
+  margin-top: 1rem;
+ 
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+
+height: 38px;
+
+  border-width: 0.1rem;
+  background-color: white;
+  border-style: solid;
+  border-color: #4865b8;
+  font-family: var(--font-inter);
+  
+
+}
+
+
+
+.textfield input {
+  flex: 1;
+  border: none;
+ 
+  font-family: var(--font-raleway);
+  font-weight: 500;
+ 
+
+  outline: none;
+  color: #000;
+  background: #fff;
+ 
+  
+}
+
+.labelCode{
+  letter-spacing: 2px;
+}
+
+.labelDate{
+  letter-spacing: 2px;
+  margin-right: 20px;
+}
 
 
 

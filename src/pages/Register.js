@@ -173,9 +173,13 @@ function Register() {
                             placeholder="Enter First PIN" className='registerField form-control'
                             type='number' name='actual' />
 
-<input value={mobile} min={1} onChange={(e) => setMobile(e.target.value)}
-                            placeholder="Enter Mobile Number" className='registerField form-control'
-                            type='number' name='mobilenumber' />
+<div className="textfield">
+<label className='labelCode'>+254</label>
+<input value={mobile} min={1} maxlength="9" onChange={(e) => setMobile(e.target.value)}
+                            placeholder="Enter Mobile Number" 
+                            type='text' name='mobilenumber' />
+</div>
+
 
                         <select onChange={(e) => setLimit(e.target.value)} class="registerField form-select" aria-label="Default select example">
                             <option selected>Select Withdrawal Limit</option>
