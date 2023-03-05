@@ -44,7 +44,7 @@ function Register() {
     const register = async () => {
         setError("")
         try {
-           
+       
             let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
             let kraReg = /^[A-Z]\d{9}[A-Z]$/;
             //validate pin
@@ -73,7 +73,10 @@ function Register() {
                 setError("Please enter mobile number")
             }else if(mobile.length<9){
                 setError("Mobile number is invalid!")
+            }else if(isNaN(mobile)){
+                setError("Mobile number is invalid!")
             }
+
             else if (limit.startsWith("Select") || limit === "") {
                 setError("Please select Withdrawal Limit")
             }else if (actual_balance === "") {
