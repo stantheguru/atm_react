@@ -32,7 +32,7 @@ function TakeCard() {
 
         <div className='outerTakeCard'>
 
-        <img alt='logoTakeCard' className='logoTakeCard' src={logo} />
+        <img onClick={()=>navigate("/home")} alt='logoTakeCard' className='logoTakeCard' src={logo} />
 
 
           <div className='cardTakeCard'>

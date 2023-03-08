@@ -100,7 +100,7 @@ function Transfer() {
       <div className='outerView'>
 
 
-        <img alt='logo' className='logo' src={logo} />
+        <img onClick={()=>navigate("/home")} alt='logo' className='logo' src={logo} />
 
         <div className='cardInnerLogin'>
           <div className='cardPin'>

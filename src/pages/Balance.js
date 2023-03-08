@@ -78,7 +78,7 @@ function Balance() {
           <div className='outerViewBalance'>
 
           <button onClick={()=>navigate("/home")} className='back btn btn-warning balanceBack'><FaArrowCircleLeft class='#F0182D'/></button>
-            <img alt='logo' className='logoBalance' src={logo} />
+            <img onClick={()=>navigate("/home")} alt='logo' className='logoBalance' src={logo} />
             <button onClick={()=>navigate("/")} className='back btn btn-warning balanceExit'><FaWindowClose color='#F0182D'/></button>
 
             <div className='cardInnerBalance'>

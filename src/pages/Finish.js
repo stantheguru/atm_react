@@ -95,7 +95,7 @@ fetchData()
 
         <div className='outerFinish'>
 
-        <img alt='logo' className='logoFinish' src={logo} />
+        <img onClick={()=>navigate("/home")} alt='logo' className='logoFinish' src={logo} />
 
 
           <div className='cardFinish'>

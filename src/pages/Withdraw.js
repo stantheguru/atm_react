@@ -92,7 +92,7 @@ function Withdraw() {
           <div className='outerViewWithdraw'>
 
           <button onClick={()=>navigate("/home")} className='back btn btn-warning'><FaArrowCircleLeft color='#F0182D'/></button>
-            <img alt='logo' className='logoWithdraw' src={logo} />
+            <img onClick={()=>navigate("/home")} alt='logo' className='logoWithdraw' src={logo} />
 
             <div className='cardInnerWithdraw'>
               <div className='cardWithdrawLeft'>

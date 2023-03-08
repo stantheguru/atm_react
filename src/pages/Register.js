@@ -99,7 +99,7 @@ function Register() {
                 formData.append("Email", email)
                 formData.append("AccountNumber", account)
                 formData.append("AccountName", name)
-                formData.append("Limit", limit)
+                formData.append("WithdrawalLimit", limit)
                 formData.append("ActualBalance", actual_balance)
                 formData.append("AvailableBalance", available_balance)
                 formData.append("KRAPIN", KRAPIN)
@@ -117,7 +117,7 @@ function Register() {
                 const json = await response.json();
                 var success = json.success
                
-                
+                //alert(JSON.stringify(json))
                 if(success ==="saved"){
                     alert("Customer has been registerd successfully")
                 }else if(success ==="Email exists"){

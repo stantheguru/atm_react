@@ -40,7 +40,7 @@ function ThankYou() {
 
       <div className='outerThankYou'>
 
-        <img alt='logo' className='logoThank' src={logo} />
+        <img onClick={()=>navigate("/home")} alt='logo' className='logoThank' src={logo} />
 
 
         <div className='cardThankYou'>
