@@ -16,18 +16,18 @@ function Login() {
   const [error, setError] = useState("")
   const navigate = useNavigate()
 
-  function checkLogin(){
- 
-    if(sessionStorage.getItem("session")!=null){
+  function checkLogin() {
+
+    if (sessionStorage.getItem("session") != null) {
       navigate("/home")
     }
-   }
+  }
   /* eslint-disable */
-   useEffect(()=>{
-  checkLogin()
-   },[])
-  
-/* eslint-disable */
+  useEffect(() => {
+    checkLogin()
+  }, [])
+
+  /* eslint-disable */
   function clear() {
     //clear fields
     setValues(['', '', '', ''])
@@ -44,96 +44,96 @@ function Login() {
         setError("Please enter PIN")
       } else if (pinCode.length < 4) {
         setError("Password nust be 4 digits")
-      } 
+      }
       //validate email
       else if (email === "") {
         setError("Please enter email")
       } else if (reg.test(email) === false) {
         setError("The email is invalid")
         return false;
-      } else  {
+      } else {
         setError("")
         //Authenticate User
 
         var formData = new FormData()
         formData.append("Email", email)
         formData.append("PIN", pinCode)
-        
 
-        const response = await fetch(url+"/login", {
+
+        const response = await fetch(url + "/login", {
           method: 'POST',
           body: formData,
-          
-      });
 
-      const json = await response.json();
-    
-      if (json.exists === "YES") {
-        sessionStorage.removeItem("session")
-        var session = '{"Email":"' + email + '","Limit":"' + json.Limit + '", "AccountName":"' + json.AccountName + '",  "MobileNumber":"' + json.MobileNumber + '", "CustomerID":"' + json.CustomerID + '"}'
+        });
 
-        
-        sessionStorage.setItem("session", session)
-     
-        navigate("/home")
-      }else{
-        setError("Incorrect login credentials!!")
-      }
-        
-      }
-      }catch (e) {
-if(e.toString().startsWith("TypeError")){
-  setError("Network Error!!")
-}
-      }
+        const json = await response.json();
 
+        if (json.exists === "YES") {
+          sessionStorage.removeItem("session")
+          var session = '{"Email":"' + email + '","Limit":"' + json.Limit + '", "AccountName":"' + json.AccountName + '",  "MobileNumber":"' + json.MobileNumber + '", "CustomerID":"' + json.CustomerID + '"}'
+
+
+          sessionStorage.setItem("session", session)
+
+          navigate("/home")
+        } else {
+          setError("Incorrect login credentials!!")
+        }
+
+      }
+    } catch (e) {
+      if (e.toString().startsWith("TypeError")) {
+        setError("Network Error!!")
+      }
     }
+
+  }
 
 
   return (
-      <>
-       
-          <div className='outerView'>
+    <>
+
+      <div className='outerView'>
 
 
-            <img alt='logo' className='logo' src={logo} />
+        <img alt='logo' className='logo' src={logo} />
 
-            <div className='cardInnerLogin'>
-              <div className='cardPin'>
+        <div className='cardInnerLogin'>
+          <div className='cardPin'>
 
-                <h4 className="pinHeader">ENTER PIN</h4>
+            <h4 className="pinHeader">ENTER PIN</h4>
 
-                <PinInput
+            <PinInput
 
-                  values={values}
-                  size="lg"
-                  borderColor='#4865b8'
-                  onChange={(value, index, values) => setValues(values)}
-                />
-                <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter email' className='email form-control' type='email' name='email' />
+              values={values}
+              size="lg"
+              borderColor='#4865b8'
+              onChange={(value, index, values) => setValues(values)}
+            />
+            <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter email' className='email form-control' type='email' name='email' />
 
-                <div className='buttons'>
-                  <button onClick={clear} className='clear btn btn-warning'>CLEAR <FaWindowClose/></button>
-                  <div className='separator'></div>
-                  <button onClick={login} className='enter btn btn-success'>ENTER <FaUnlockAlt/></button>
-                </div>
-               
-                <h6 className='error'>{error}</h6>
-                <a href='/register'>Add Customer</a>
-              </div>
-              
-
-              <div className='imageRightDivLogin'>
-                <img alt='atm' className='imageRightLogin' src={pin} />
-              </div>
+            <div className='buttons'>
+              <button onClick={clear} className='clear btn btn-warning'>CLEAR <FaWindowClose /></button>
+              <div className='separator'></div>
+              <button onClick={login} className='enter btn btn-success'>ENTER <FaUnlockAlt /></button>
             </div>
-           
 
-        
+            <h6 className='error'>{error}</h6>
+            <a href='/register'>Add Customer</a>
+          </div>
+
+
+          <div className='imageRightDivLogin'>
+            <img alt='atm' className='imageRightLogin' src={pin} />
+          </div>
         </div>
 
-      </>
-    );
-  }
 
-  export default Login;
+
+      </div>
+
+    </>
+  );
+}
+
+export default Login;
